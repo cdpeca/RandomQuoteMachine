@@ -1,0 +1,9 @@
+{
+  "name": "RandomQuoteMachine",
+  "version": "1.0.0",
+  "description": "Simple javascript random quote generator",
+  "main": "index.html",
+  "repository": "https://github.com/cdpeca/RandomQuoteMachine.git",
+  "author": "cdpeca <chrispeca+github@hotmail.com>",
+  "license": "MIT"
+}
