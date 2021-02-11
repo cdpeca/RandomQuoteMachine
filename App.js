@@ -55,11 +55,15 @@ const updateElements = () => {
         `${tumblrURI}&posttype=${tumblrPostType}&content=${currentQuote}&caption=${currentAuthor}`
     );
 
+    // ! Not playing well on a mobile device with the app installed
+    // TODO: Figure out why mobile device with app installed not working when website works fine
+    /*
     // Use onclick for popup behavior
     $('#tumblr-quote').attr(
         `onclick`,
         `window.open("${tumblrURI}&posttype=${tumblrPostType}&content=${currentQuote}&caption=${currentAuthor}","popup","width=600,height=600");return false;`
     );
+    */
 };
 
 const initialRender = async () => {
