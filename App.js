@@ -50,10 +50,12 @@ const updateElements = () => {
     const tumblrPostType = `quote`;
 
     // Use href for new tab behavior
+    /*
     $('#tumblr-quote').attr(
         `href`,
         `${tumblrURI}&posttype=${tumblrPostType}&content=${currentQuote}&caption=${currentAuthor}`
     );
+    */
 
     // ! Not playing well on a mobile device with the app installed
     // TODO: Figure out why mobile device with app installed not working when website works fine
@@ -64,6 +66,15 @@ const updateElements = () => {
         `window.open("${tumblrURI}&posttype=${tumblrPostType}&content=${currentQuote}&caption=${currentAuthor}","popup","width=600,height=600");return false;`
     );
     */
+
+    $('#tumblr-quote').attr(
+        'href',
+        'https://www.tumblr.com/widgets/share/tool?posttype=quote&tags=quotes,freecodecamp&caption=' +
+            encodeURIComponent(currentAuthor) +
+            '&content=' +
+            encodeURIComponent(currentQuote) +
+            '&canonicalUrl=https%3A%2F%2Fwww.tumblr.com%2Fbuttons&shareSource=tumblr_share_button'
+    );
 };
 
 const initialRender = async () => {
